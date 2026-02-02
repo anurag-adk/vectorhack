@@ -1,0 +1,8 @@
+export { default as Hero } from "./Hero";
+export { default as About } from "./About";
+export { default as Themes } from "./Themes";
+export { default as Timeline } from "./Timeline";
+export { default as Rules } from "./Rules";
+export { default as Prizes } from "./Prizes";
+export { default as FAQ } from "./FAQ";
+export { default as CTA } from "./CTA";
