@@ -4,7 +4,7 @@ import { useCountdown } from '../../hooks'
 function TimeCountDown() {
 
     const { days, hours, minutes, seconds } = useCountdown(
-        "February 9, 2026 09:00:00",
+        "February 9, 2026 10:00:00",
       );
   const formatNumber = (num) => String(num).padStart(2, "0");
 

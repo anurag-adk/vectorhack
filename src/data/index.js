@@ -1,3 +1,4 @@
+
 export const themesData = [
   {
     id: 1,
@@ -234,6 +235,7 @@ export const navLinks = [
   { name: "Themes", href: "/#themes" },
   { name: "Timeline", href: "/#timeline" },
   { name: "Rules", href: "/#rules" },
+  {name:"Schedule",href:"/#schedule"},
   { name: "Prizes", href: "/#prizes" },
   { name: "FAQ", href: "/#faq" },
   { name: "Contact", href: "/contact" },

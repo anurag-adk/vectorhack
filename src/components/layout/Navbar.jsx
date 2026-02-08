@@ -38,13 +38,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className=""
+      className="flex items-center justify-center w-full"
     >
       <div
-        className={`fixed top-0 z-50 px-2 py-4 w-full transform transition-all duration-300 ${
+        className={`fixed top-0 z-50 px-2 py-4 w-full  transition-all duration-300 ${
           isScrolled
-            ? "left-1/2 -translate-x-1/2 top-5 rounded-full border-b bg-[rgba(10,10,15,0.95)] backdrop-blur-[20px] md:w-[80%] glass"
-            : "left-0 translate-x-0 top-0 bg-transparent"
+            ? "absolute mt-4 rounded-full border-b bg-[rgba(10,10,15,0.95)] backdrop-blur-[20px] md:w-[80%] glass"
+            : "translate-x-0 bg-transparent"
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5">
@@ -95,11 +95,11 @@ const Navbar = () => {
           ))}
           <li>
             <a
-              href="/#register"
+              href="/timeleft"
               className="rounded-lg bg-[linear-gradient(135deg,#005b96_0%,#513c97_100%)] px-6 py-2.5 font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(0,91,150,0.3)]"
-              onClick={(e) => handleNavClick(e, "/#register")}
+              onClick={(e) => handleNavClick(e, "/timeleft")}
             >
-              Register Now
+              Time Left
             </a>
           </li>
         </ul>
