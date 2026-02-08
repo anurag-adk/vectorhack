@@ -31,7 +31,7 @@ const Hero = () => {
             <span className="h-2 w-2 rounded-full bg-[#ffdf42] animate-pulse" />
             <span>Registration Open • Limited Seats</span>
           </div> */}
-          <div className="mx-auto h-100 w-100 animate-bounce-slow">
+          <div className="mx-auto h-90 w-90 md:h-120 md:w-120 animate-bounce-slow">
             <img
               src="/VectorHack.svg"
               alt="VectorHack Logo"
@@ -49,7 +49,7 @@ const Hero = () => {
             Green Tech for Green Pokhara
           </p>
 
-          <p className="mx-auto mb-8 max-w-[600px] text-[1.1rem] text-[#535353]">
+          <p className="mx-auto mb-8 max-w-150 text-[1.1rem] text-[#535353]">
             A 48-hour national software hackathon organized by i-CES, as part of
             VECTOR at IOE, Pashchimanchal Campus. Build innovative solutions
             that create meaningful impact.
