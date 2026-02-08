@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2026-02-09",
+    "label": "9 Feb",
+    "items": [
+      { "time": "9:00 - 10:00 AM", "activity": "Registration" },
+      { "time": "10:00 - 10:15 AM", "activity": "Orientation Session" },
+      { "time": "10:15 - 11:30 AM", "activity": "Coding session starts" },
+      { "time": "11:30 - 12:00 PM", "activity": "Lunch Break" },
+      { "time": "12:00 - 1:45 PM", "activity": "Mentorship Session" },
+      { "time": "1:45 - 2:15 PM", "activity": "Snacks and Refreshment" },
+      { "time": "2:15 - 7:00 PM", "activity": "Coding session & Mentorship session" },
+      { "time": "7:00 - 8:00 PM", "activity": "Dinner" },
+      { "time": "8:00 - 12:00 AM", "activity": "Coding session resumes" }
+    ]
+  },
+  {
+    "date": "2026-02-10",
+    "label": "10 Feb",
+    "items": [
+      { "time": "8:00 - 9:00 AM", "activity": "Breakfast" },
+      { "time": "9:00 - 11:30 AM", "activity": "Coding Session" },
+      { "time": "11:30 - 12:00 PM", "activity": "Lunch Break" },
+      { "time": "12:00 - 2:00 PM", "activity": "Coding & Mentorship session" },
+      { "time": "2:00 - 2:30 PM", "activity": "Snacks and Refreshment" },
+      { "time": "2:15 - 7:00 PM", "activity": "Coding session & Mentorship session" },
+      { "time": "7:00 - 8:00 PM", "activity": "Dinner" },
+      { "time": "8:00 - 12:00 AM", "activity": "Coding session resumes" }
+    ]
+  },
+  {
+    "date": "2026-02-11",
+    "label": "11 Feb",
+    "items": [
+      { "time": "6:00 AM", "activity": "Hackathon ends" },
+      { "time": "8:00 - 9:00 AM", "activity": "Breakfast" },
+      { "time": "11:00 - 12:00 PM", "activity": "Pitching session" },
+      { "time": "12:00 - 12:30 PM", "activity": "Lunch Break" },
+      { "time": "12:30 - 2:30 PM", "activity": "Pitching session ends" }
+    ]
+  }
+]
