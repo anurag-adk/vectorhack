@@ -5,7 +5,7 @@ import { navLinks } from "../../data";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { isScrolled } = useScrollPosition(50);
+  const { isScrolled } = useScrollPosition(100);
   const location = useLocation();
 
   const toggleMenu = () => {
@@ -38,20 +38,23 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed left-0 top-0 z-1000 w-full py-4 transition duration-300 ${
-        isScrolled
-          ? "border-b border-[#2a2a3a] bg-[rgba(10,10,15,0.95)] backdrop-blur-[20px]"
-          : "bg-transparent"
-      }`}
+      className=""
     >
-      <div className="mx-auto flex max-w-300 items-center justify-between px-5">
+      <div
+        className={`fixed top-0 z-50 px-2 py-4 transform transition-all duration-300 ${
+          isScrolled
+            ? "left-1/2 -translate-x-1/2 top-5 rounded-full border-b bg-[rgba(10,10,15,0.95)] backdrop-blur-[20px] w-[80%] glass"
+            : "left-0 translate-x-0 top-0 bg-transparent w-full"
+        }`}
+      >
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5">
         <Link
           to="/"
           className="flex items-center gap-3 text-white no-underline"
           onClick={closeMenu}
         >
-          <div className="flex h-11.25 w-11.25 items-center justify-center rounded-[10px] bg-[linear-gradient(135deg,#005b96_0%,#513c97_100%)] text-[1.2rem] font-bold">
-            VH
+          <div className="flex h-8 w-8 md:w-12 md:h-12 items-center justify-center rounded-[10px]  text-[1.2rem] font-bold">
+            <img src="/favicon.svg" alt="VectorHack Logo" />
           </div>
           <span className="text-[1.4rem] font-bold font-['Space_Grotesk',Inter,sans-serif]">
             Vector<span className="text-[#4aacd3]">Hack</span>
@@ -129,6 +132,7 @@ const Navbar = () => {
             }}
           />
         </button>
+      </div>
       </div>
     </nav>
   );
