@@ -1,8 +1,8 @@
 import React, { useMemo } from "react";
 import { useCountdown } from "../hooks/useCountdown";
 
-const HACKATHON_DURATION_MS = 48 * 60 * 60 * 1000;
 const HACKATHON_START_ISO = "2026-02-09T10:35:00+05:45";
+const HACKATHON_END_ISO = "2026-02-11T06:00:00+05:45";
 
 function TimeLeft() {
   const hackathonStart = useMemo(
@@ -10,13 +10,10 @@ function TimeLeft() {
     [],
   );
 
-  const hackathonEnd = useMemo(
-    () => new Date(hackathonStart.getTime() + HACKATHON_DURATION_MS),
-    [hackathonStart],
-  );
+  const hackathonEnd = useMemo(() => new Date(HACKATHON_END_ISO), []);
 
   const { days, hours, minutes, seconds, isExpired } = useCountdown(
-    hackathonEnd,
+    HACKATHON_END_ISO,
   );
 
   const remainingSeconds = useMemo(() => {
@@ -26,7 +23,12 @@ function TimeLeft() {
     return days * 86400 + hours * 3600 + minutes * 60 + seconds;
   }, [days, hours, minutes, seconds, isExpired]);
 
-  const totalSeconds = Math.round(HACKATHON_DURATION_MS / 1000);
+  const totalSeconds = useMemo(() => {
+    const diffSeconds = Math.round(
+      (hackathonEnd.getTime() - hackathonStart.getTime()) / 1000,
+    );
+    return diffSeconds > 0 ? diffSeconds : 1;
+  }, [hackathonEnd, hackathonStart]);
 
   const eventStatus = useMemo(() => {
     const currentEstimate = hackathonEnd.getTime() - remainingSeconds * 1000;
